@@ -1,0 +1,6 @@
+---
+- name: Install Strongswan role
+  hosts: all
+
+  roles:
+    - mrhoads.strongswan
