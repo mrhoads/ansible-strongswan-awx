@@ -11,6 +11,7 @@
     name: net.ipv4.ip_forward
     value: '1'
     state: present
+    reload: no
   notify: restart sysctl settings
 
 - name: Set sysctl ipv4 accept redirects
@@ -18,6 +19,7 @@
     name: net.ipv4.conf.all.accept_redirects
     value: '0'
     state: present
+    reload: no
   notify: restart sysctl settings
 
 - name: Set sysctl ipv4 send redirects
@@ -25,4 +27,5 @@
     name: net.ipv4.conf.all.send_redirects
     value: '0'
     state: present
+    reload: no
   notify: restart sysctl settings
