@@ -1,2 +1,6 @@
 ---
 # handlers file for mrhoads.strongswan
+
+- name: restart sysctl settings
+  command: /sbin/sysctl -p
+  become: true
