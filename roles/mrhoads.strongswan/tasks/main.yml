@@ -11,18 +11,18 @@
     name: net.ipv4_ip_forward
     value: '1'
     state: present
-  handler: restart sysctl settings
+  notify: restart sysctl settings
 
 - name: Set sysctl ipv4 accept redirects
   sysctl:
     name: net.ipv4.conf.all.accept_redirects
     value: '0'
     state: present
-  handler: restart sysctl settings
+  notify: restart sysctl settings
 
 - name: Set sysctl ipv4 send redirects
   sysctl:
     name: net.ipv4.conf.all.send_redirects
     value: '0'
     state: present
-  handler: restart sysctl settings
+  notify: restart sysctl settings
