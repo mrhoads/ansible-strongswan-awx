@@ -8,7 +8,7 @@
 
 - name: Set sysctl ipv4 forwarding
   sysctl:
-    name: net.ipv4_ip_forward
+    name: net.ipv4.ip_forward
     value: '1'
     state: present
   notify: restart sysctl settings
